@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+@model List<PostModel>
+<div class="text-center">
+    <h1 class="display-4">Welcome to Kevin's blog</h1>
+
+</div>
+<div >
+    @foreach (var item in Model)
+    {
+    <div class="post-colored">
+        <div>
+            <h3>
+                @Html.ActionLink(item.Title, "Article", "Home", new { fileName = item.Title })
+            </h3>
+
+        </div>
+        <div class="post-date">
+            @item.CreationDate
+
+        </div>
+
+        <div>@item.Summary</div>
+    </div>
+    }
+</div>
