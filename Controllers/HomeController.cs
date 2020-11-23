@@ -29,13 +29,15 @@ namespace K1_Static_Website.Controllers
             {
                 var fileName = item.Substring(item.IndexOf("\\") + 1);
                 var html = await Markdown.ParseFromFileAsync($"~/Markdowns/{fileName}");
+                var postTitle = FileDigger.GetPostTitle(fileName);
                 postListSummary.Add(
                     new PostModel
                     {
-                        Title = FileDigger.GetPostTitle(fileName),
+                        Title = postTitle,
+                        Link = postTitle.Replace(' ', '-'),
                         Summary = FileDigger.GetSummary(html),
                         CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });
+                    }); 
             }
             return View(model: postListSummary);
         }
@@ -43,6 +45,7 @@ namespace K1_Static_Website.Controllers
         [HttpGet("Article/{*fileName}")]
         public async Task<IActionResult> Article(string fileName)
         {
+            fileName = fileName.Replace('-',' ');
             if (string.IsNullOrEmpty(fileName))
             {
                 return BadRequest("Wrong parameter.");
