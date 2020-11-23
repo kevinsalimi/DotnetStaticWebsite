@@ -35,42 +35,6 @@ namespace K1_Static_Website.Controllers
                         Title = FileDigger.GetPostTitle(fileName),
                         Summary = FileDigger.GetSummary(html),
                         CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });postListSummary.Add(
-                    new PostModel
-                    {
-                        Title = FileDigger.GetPostTitle(fileName),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });postListSummary.Add(
-                    new PostModel
-                    {
-                        Title = FileDigger.GetPostTitle(fileName),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });postListSummary.Add(
-                    new PostModel
-                    {
-                        Title = FileDigger.GetPostTitle(fileName),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });postListSummary.Add(
-                    new PostModel
-                    {
-                        Title = FileDigger.GetPostTitle(fileName),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });postListSummary.Add(
-                    new PostModel
-                    {
-                        Title = FileDigger.GetPostTitle(fileName),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    });postListSummary.Add(
-                    new PostModel
-                    {
-                        Title = FileDigger.GetPostTitle(fileName),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
                     });
             }
             return View(model: postListSummary);

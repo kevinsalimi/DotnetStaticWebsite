@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace K1_Static_Website.Helper
 {
@@ -15,9 +16,11 @@ namespace K1_Static_Website.Helper
 
         internal static string GetSummary(string html)
         {
-            var p = html.IndexOf("<p>");
-            var slashP = html.IndexOf("</p>");
-            return string.Concat(html.Substring(p + 3, slashP), "...");
+            XmlDataDocument x = new XmlDataDocument();
+            x.LoadXml(string.Concat("<div> ", html, "</div>"));
+            var p = x.GetElementsByTagName("p");
+
+            return string.Concat(p[0].InnerText, "...");
         }
     }
 }
