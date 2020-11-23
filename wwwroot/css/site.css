@@ -87,8 +87,9 @@ pre {
 
 .post-colored {
     background-color: #f0f5ff;
-    padding: 1%;
+    padding: 2%;
     margin: 3% 0;
+    text-align: justify;
 }
 
 .footer {
