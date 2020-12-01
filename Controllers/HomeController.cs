@@ -1,5 +1,7 @@
 ﻿using K1_Static_Website.Helper;
 using K1_Static_Website.Models;
+using K1_Static_Website.Parser;
+using Markdig;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,57 +10,58 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Westwind.AspNetCore.Markdown;
 
 namespace K1_Static_Website.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        private const string postEnvironment = "wwwroot/posts";
+        private const string postExtention = "*.md";
 
         public async Task<IActionResult> Index()
         {
-            var files = Directory.GetFiles("wwwroot/Markdowns", "*.md", SearchOption.TopDirectoryOnly);
-            List<PostModel> postListSummary = new List<PostModel>(10);
-            foreach (var item in files)
+            var posts = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
+
+            foreach (var post in posts)
             {
-                var fileName = item.Substring(item.IndexOf("\\") + 1);
-                var html = await Markdown.ParseFromFileAsync($"~/Markdowns/{fileName}");
-                var postTitle = FileDigger.GetPostTitle(fileName);
-                postListSummary.Add(
-                    new PostModel
+                HeaderParser.CreateNewModel();
+
+                using (var fileStream = new FileStream(post, FileMode.Open, FileAccess.Read))
+                {
+                    using (StreamReader reader = new StreamReader(fileStream))
                     {
-                        Title = postTitle,
-                        Link = postTitle.Replace(' ', '-'),
-                        Summary = FileDigger.GetSummary(html),
-                        CreationDate = System.IO.File.GetCreationTime(item).ToLongDateString()
-                    }); 
+                        HeaderParser.CreateNewPost(post);
+                        for (int i = 0; i < 6; i++)
+                        {
+                            HeaderParser.ParsLine(await reader.ReadLineAsync());
+                        }
+                        HeaderParser.MakeHeader();
+                    }
+                }
+
+
             }
-            return View(model: postListSummary);
+            return View(model: HeaderParser.GetPostList());
         }
 
-        [HttpGet("Article/{*fileName}")]
+        [HttpGet("article/{*fileName}")]
         public async Task<IActionResult> Article(string fileName)
         {
-            fileName = fileName.Replace('-',' ');
-            if (string.IsNullOrEmpty(fileName))
+            using (var fileStream = new FileStream(HeaderParser.FindAddress(fileName),
+                FileMode.Open, FileAccess.Read))
             {
-                return BadRequest("Wrong parameter.");
-            }
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    for (var i = 0; i < 7; i++)
+                    {
+                        await reader.ReadLineAsync();
+                    }
 
-            try
-            {
-                var htmlData = await Markdown.ParseFromFileAsync($"~/Markdowns/{fileName}.md");
-                return View(model: htmlData);
-            }
-            catch (Exception)
-            {
-                return View(model: "Some bad things happend.");
+                    var markdown = await reader.ReadToEndAsync();
+                    var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+                    return View(model: new ArticleModel
+                    { Html = Markdown.ToHtml(markdown, pipeline), Title = string.Concat("/", fileName) });
+                }
             }
         }
 

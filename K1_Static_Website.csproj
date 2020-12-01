@@ -2,10 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>0d8f03da-76e9-442b-a213-d7ab6e3a0e5a</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.5.0" />
+    <PackageReference Include="Markdig.Signed" Version="0.22.0" />
   </ItemGroup>
 
 </Project>
