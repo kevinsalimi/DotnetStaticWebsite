@@ -45,6 +45,10 @@ html {
         display: none;
     }
 
+    .margin-bottom-mobile {
+        margin-bottom: 3%;
+    }
+
     .about-img-div {
         width: 25% !important;
     }
