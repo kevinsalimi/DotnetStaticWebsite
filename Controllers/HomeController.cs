@@ -21,11 +21,10 @@ namespace K1_Static_Website.Controllers
         public async Task<IActionResult> Index()
         {
             var posts = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
+            HeaderParser.CreateNewModel();
 
             foreach (var post in posts)
             {
-                HeaderParser.CreateNewModel();
-
                 using (var fileStream = new FileStream(post, FileMode.Open, FileAccess.Read))
                 {
                     using (StreamReader reader = new StreamReader(fileStream))
