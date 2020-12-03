@@ -10,7 +10,8 @@ Author: Kevin Salimi
 
 <h3 align="center">
 
-  
+  ![NuGet](https://img.shields.io/nuget/v/BenchmarkDotNet.svg)
+
 </h3>
 
 <h3 align="center">

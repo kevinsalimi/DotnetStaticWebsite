@@ -49,9 +49,6 @@ html {
         margin-bottom: 3%;
     }
 
-    .about-img-div {
-        width: 25% !important;
-    }
 }
 
 .border-top {
@@ -92,8 +89,10 @@ pre {
 .post-colored {
     background-color: #f0f5ff;
     padding: 2%;
-    margin: 3% 0;
+    margin: 1% 0;
     text-align: justify;
+    border: 2px solid #cedbf5;
+    border-radius: 10px;
 }
 
 .footer {
@@ -148,15 +147,3 @@ pre {
     margin: 2% 0;
 }
 
-
-.about-img-div {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 13%;
-    margin: 0 auto;
-}
-
-.about-img {
-    object-fit: cover;
-    width:100%;
-}

@@ -1,15 +1,53 @@
-﻿<div>
-    <h2>About me</h2>
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "About";
+}
+
+@section Headers {
+    <style>
+        h3 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        /* vs2015 theme specific*/
+        pre {
+            background: #1E1E1E;
+            color: #eee;
+            padding: 0.7em !important;
+            overflow-x: auto;
+            white-space: pre;
+            word-break: normal;
+            word-wrap: normal;
+        }
+
+            pre > code {
+                white-space: pre;
+            }
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 13%;
+            margin: 0 auto;
+        }
+    </style>
+}
+<div style="margin-top: 40px; text-align:center;">
+    @Html.Raw(Model)
+    
 </div>
-<div class="about-img-div">
-    <img class="about-img" src="~/Images/personalPic.png" />
-</div>
-<div class="post-colored">
-    <p>
-        This is Kevin, I've been working in IT industry since 2015. Microsoft stacks are my favorite and cannot wait to take over them, also share my knowledge with others.
-    </p>
-    <p>I would share my experience regularly, not a writer and don't care. :)</p>
-    <p>
-        I find programming fascinating. It's something that makes me excited, and is a ground in which my imaginary and creativity would be grew up. This not going to happen unless I boost my knowledge daily and gradually.  
-    </p>
-</div>
+
+@section Scripts {
+    <script src="~/lib/highlightjs/highlight.pack.js"></script>
+    <link href="~/lib/highlightjs/styles/vs2015.css" rel="stylesheet" />
+    <script src="~/lib/highlightjs-badge.min.js"></script>
+
+    <script>
+        var pres = document.querySelectorAll("pre>code");
+        for (var i = 0; i < pres.length; i++) {
+            hljs.highlightBlock(pres[i]);
+        }
+
+       window.highlightJsBadge();
+    </script>
+}
