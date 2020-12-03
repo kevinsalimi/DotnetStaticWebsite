@@ -10,6 +10,7 @@
         <a href="https://www.linkedin.com/company/asa-inc-/" target="_blank">Asa Co</a> (Tehran, Iran).
         I work primarily with ASP.NET/ASP.NET Core to help produce amazing stock market products for the
         <a href="http://agahgroup.com/" target="_blank">Agah group.</a>
+        In addition, multi-threading and memory management are regular challenges here that makes me thrilled after solving them.
     </p>
     <p>
         Outside of my work at Asa, I consume many blog posts, podcasts, and videos to learn about the new technologies
