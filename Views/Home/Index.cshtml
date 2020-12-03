@@ -1,7 +1,7 @@
 ﻿
 @model List<PostModel>
 <div class="text-center">
-    <h1 class="display-4 hide-mobile">Welcome to Kevin's blog</h1>
+    <h1 class="display-4 hide-mobile" style="font-size: 40px;">Welcome to Kevin's blog</h1>
 </div>
 <div>
     @foreach (var item in Model)
@@ -19,7 +19,7 @@
                 <span>@item.Author</span>
             </div>
 
-            <div>@item.Summary</div>
+            <div style="text-align: justify">@item.Summary</div>
         </div>
     }
 </div>

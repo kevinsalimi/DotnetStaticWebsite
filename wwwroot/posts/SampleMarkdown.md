@@ -10,7 +10,7 @@ Author: Kevin Salimi
 
 <h3 align="center">
 
-  ![](docs/logo/logo-wide.png)
+  ![NuGet](https://img.shields.io/nuget/v/BenchmarkDotNet.svg)
 
 </h3>
 
@@ -115,7 +115,7 @@ Intel Core i7-7700K CPU 4.20GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cor
 
 The measured data can be exported to different formats (md, html, csv, xml, json, etc.) including plots:
 
-![](docs/images/v0.12.0/rplot.png)
+![](/docs/images/v0.12.0/rplot.png)
 
 *Supported runtimes:* .NET 5+, .NET Framework 4.6.1+, .NET Core 2.0+, Mono, CoreRT  
 *Supported languages:* C#, F#, Visual Basic  
