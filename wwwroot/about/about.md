@@ -6,7 +6,7 @@
 <div class="post-colored">
     
     <p>
-        Hello, My name is Kevin. I'm a .NET developer working in
+        Hello, My name is Kevin. I'm a .NET developer working at
         <a href="https://www.linkedin.com/company/asa-inc-/" target="_blank">Asa Co</a> (Tehran, Iran).
         I work primarily with ASP.NET/ASP.NET Core to help produce amazing stock market products for the
         <a href="http://agahgroup.com/" target="_blank">Agah group.</a>
