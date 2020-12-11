@@ -1,7 +1,7 @@
 ﻿
 ## About me
 
-![NuGet](/Images/about.png)
+![kevinsalimi](/Images/about.png)
 
 <div class="post-colored">
     
