@@ -81,6 +81,11 @@ blockquote {
     background: aliceblue;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -165,7 +170,7 @@ pre {
 
 
 .markdown-body {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.7;
     overflow: hidden;
 }
