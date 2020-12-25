@@ -1,7 +1,7 @@
 ﻿
 ## About me
 
-![kevinsalimi](/Images/about.png)
+![kevinsalimi](/data/Images/about.png)
 
 <div class="post-colored">
     

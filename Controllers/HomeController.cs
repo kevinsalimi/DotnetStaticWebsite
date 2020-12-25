@@ -15,8 +15,8 @@ namespace K1_Static_Website.Controllers
 {
     public class HomeController : Controller
     {
-        private const string postEnvironment = "wwwroot/posts";
-        private const string aboutmd = "wwwroot/about/about.md";
+        private const string postEnvironment = "wwwroot/data/posts";
+        private const string aboutmd = "wwwroot/data/about/about.md";
         private const string postExtention = "*.md";
 
         public async Task<IActionResult> Index()
@@ -31,7 +31,7 @@ namespace K1_Static_Website.Controllers
                     using (StreamReader reader = new StreamReader(fileStream))
                     {
                         HeaderParser.CreateNewPost(post);
-                        for (int i = 0; i < 6; i++)
+                        for (int i = 0; i < 7; i++)
                         {
                             HeaderParser.ParsLine(await reader.ReadLineAsync());
                         }
@@ -52,15 +52,24 @@ namespace K1_Static_Website.Controllers
             {
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
-                    for (var i = 0; i < 7; i++)
+                    ArticleParser.CreateNew();
+                    for (var i = 0; i < 8; i++)
                     {
-                        await reader.ReadLineAsync();
+                        var line = await reader.ReadLineAsync();
+                        ArticleParser.ParsLine(line);
                     }
 
                     var markdown = await reader.ReadToEndAsync();
                     var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
-                    return View(model: new ArticleModel
-                    { Html = Markdown.ToHtml(markdown, pipeline), Title = string.Concat("/", fileName) });
+
+                    var model = ArticleParser.GetPostDetaile();
+                    model.Html = Markdown.ToHtml(markdown, pipeline);
+
+                    ViewBag.Summary = model.Summary;
+                    ViewBag.Keywords = model.Keywords;
+                    ViewBag.Author = model.Author;
+                    
+                    return View(model: model);
                 }
             }
         }

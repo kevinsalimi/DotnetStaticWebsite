@@ -4,6 +4,7 @@ Summary: BenchmarkDotNet helps you to transform methods into benchmarks, track t
 Keywords: Markdown, TagHelper, ASP.NET Core
 CreationDate: Tuesday, Decamber 1, 2020
 Author: Kevin Salimi
+ArticleId: 3e3ed0cc-ab61-4b4c-adec-1a4b38a79f1b
 ---
 
 ## Benchmarkdotnet getting Started

@@ -37,13 +37,16 @@ namespace K1_Static_Website.Parser
                     post.Summary = splitedLine[1];
                     break;
                 case nameof(PostModel.Keywords):
-                    post.Keywords.AddRange(splitedLine[1].Split(','));
+                    post.Keywords = splitedLine[1];
                     break;
                 case nameof(PostModel.CreationDate):
                     post.CreationDate = splitedLine[1];
                     break;
                 case nameof(PostModel.Author):
                     post.Author = splitedLine[1];
+                    break;
+                case nameof(PostModel.ArticleId):
+                    post.ArticleId = splitedLine[1];
                     break;
                 default:
                     break;

@@ -450,9 +450,9 @@ pre {
     .markdown-body code, .markdown-body tt {
         margin: 0 2px;
         padding: 0px 5px;
-        border: 1px solid #ddd;
-        background-color: #f8f8f8;
-        border-radius: 3px;
+        border: 1px solid #e1dede;
+        background-color: #fae7e7;
+        border-radius: 5px;
     }
 
     .markdown-body code {
@@ -468,12 +468,12 @@ pre {
     }
 
     .markdown-body .highlight pre, .markdown-body pre {
-        border: 1px solid #ddd;
+        border: 5px solid #161716;
         font-size: 13px;
         line-height: 19px;
         overflow: auto;
         padding: 6px 10px;
-        border-radius: 3px;
+        border-radius: 7px;
     }
 
         .markdown-body pre code, .markdown-body pre tt {
