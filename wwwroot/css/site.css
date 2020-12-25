@@ -50,9 +50,8 @@ html {
     }
 
     h3 {
-        font-size:18px;
+        font-size: 18px;
     }
-
 }
 
 .border-top {
@@ -259,6 +258,7 @@ pre {
         text-align: justify;
         margin: 15px 0;
     }
+
     .markdown-body blockquote,
     .markdown-body ul, .markdown-body ol, .markdown-body dl,
     .markdown-body table,
@@ -449,9 +449,9 @@ pre {
 
     .markdown-body code, .markdown-body tt {
         margin: 0 2px;
-        padding: 0px 5px;
+        padding: 0px 2px;
         border: 1px solid #e1dede;
-        background-color: #fae7e7;
+        background: #eee;
         border-radius: 5px;
     }
 
