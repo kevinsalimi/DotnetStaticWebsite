@@ -478,7 +478,33 @@ pre {
 
         .markdown-body pre code, .markdown-body pre tt {
             margin: 0;
-            padding: 0;
+            padding: 15px 0px 10px 0;
             background-color: transparent;
             border: none;
         }
+
+table {
+    width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 15px 0;
+    border-color: gray;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    color: white;
+    background: #555;
+}
+
+tbody > tr:nth-child(even) {
+    background: #eee;
+}
