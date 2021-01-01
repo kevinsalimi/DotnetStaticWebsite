@@ -40,6 +40,12 @@ html {
     }
 }
 
+@media (max-width:1200px) {
+    .welcome {
+        width: 70% !important;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .hide-mobile {
         display: none;
@@ -52,6 +58,7 @@ html {
     h3 {
         font-size: 18px;
     }
+    
 }
 
 .border-top {
@@ -507,4 +514,19 @@ th {
 
 tbody > tr:nth-child(even) {
     background: #eee;
+}
+
+li.nav-item:hover {
+    background-color: #d4e8f9;
+    border-radius: 10px;
+}
+
+.welcome {
+    font-size: 32px;
+    margin-bottom: 5%;
+    padding: 2%;
+    border: 1px solid #cedbf5;
+    border-radius: 10px;
+    width: 35%;
+    margin: 0 auto;
 }

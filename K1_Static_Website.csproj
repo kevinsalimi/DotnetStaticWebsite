@@ -8,11 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\data\Images\Needle-and-thread-862x574.jpg" />
-    <Content Remove="wwwroot\data\posts\Multithreading_Lock.md" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Markdig.Signed" Version="0.22.0" />
   </ItemGroup>
 
