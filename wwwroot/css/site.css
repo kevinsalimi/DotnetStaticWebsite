@@ -51,6 +51,10 @@ html {
         display: none;
     }
 
+    img {
+        width: 35% !important;
+    }
+
     .margin-bottom-mobile {
         margin-bottom: 3%;
     }

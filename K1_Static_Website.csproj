@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\data\about\about.md" />
+    <None Include="wwwroot\data\posts\2Multithreading_Lock.md" />
+    <None Include="wwwroot\data\posts\SampleMarkdown.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Markdig.Signed" Version="0.22.0" />
   </ItemGroup>
 
