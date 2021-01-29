@@ -1,8 +1,11 @@
 ﻿
 ## About me
 
-![kevinsalimi](/data/Images/about.png)
+<div class="myDiv">
 
+![kevinsalimi](/data/Images/about.png)
+    
+ </div>
 <div class="post-colored">
     
     <p>

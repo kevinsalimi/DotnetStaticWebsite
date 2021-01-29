@@ -51,7 +51,7 @@ html {
         display: none;
     }
 
-    img {
+    .myDiv img {
         width: 35% !important;
     }
 
