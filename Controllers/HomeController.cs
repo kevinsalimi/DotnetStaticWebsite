@@ -31,7 +31,7 @@ namespace K1_Static_Website.Controllers
                     using (StreamReader reader = new StreamReader(fileStream))
                     {
                         HeaderParser.CreateNewPost(post);
-                        for (int i = 0; i < 7; i++)
+                        for (int i = 0; i < 8; i++)
                         {
                             HeaderParser.ParsLine(await reader.ReadLineAsync());
                         }
@@ -53,7 +53,7 @@ namespace K1_Static_Website.Controllers
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
                     ArticleParser.CreateNew();
-                    for (var i = 0; i < 8; i++)
+                    for (var i = 0; i < 9; i++)
                     {
                         var line = await reader.ReadLineAsync();
                         ArticleParser.ParsLine(line);

@@ -30,6 +30,8 @@ namespace K1_Static_Website.Parser
             {
                 case nameof(PostModel.Title):
                     post.Title = splitedLine[1];
+                    break;
+                case nameof(PostModel.Link):
                     post.Link = splitedLine[1].Trim().Replace(' ', '-');
                     postAddress.Add(post.Link, post.Address);
                     break;
