@@ -12,9 +12,9 @@ namespace K1_Static_Website.Parser
         private static PostModel post;
         private static Dictionary<string, string> postAddress;
 
-        public static void CreateNewModel()
+        public static void CreateNewModel(int length)
         {
-            postModels = new List<PostModel>();
+            postModels = new List<PostModel>(length);
             postAddress = new Dictionary<string, string>();
         }
 
@@ -50,6 +50,9 @@ namespace K1_Static_Website.Parser
                 case nameof(PostModel.ArticleId):
                     post.ArticleId = splitedLine[1];
                     break;
+                case nameof(PostModel.DisplayPeriority):
+                    post.DisplayPeriority = int.Parse(splitedLine[1]);
+                    break;
                 default:
                     break;
             }
@@ -62,13 +65,19 @@ namespace K1_Static_Website.Parser
 
         public static List<PostModel> GetPostList()
         {
-            return postModels;
+            return postModels.OrderByDescending(x=>x.DisplayPeriority).ToList();
         }
 
         public static string FindAddress(string link)
         {
             return postAddress[link];
         }
+
+        public static int GetPostListLength()
+        {
+            return postModels != null ? postModels.Count : 0;
+        }
+
     }
 
 }

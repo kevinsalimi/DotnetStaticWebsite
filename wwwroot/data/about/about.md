@@ -3,20 +3,17 @@
 
 <div class="myDiv">
 
-![kevinsalimi](/data/Images/about.png)
-    
- </div>
+![kevinsalimi](/data/Images/about1.jpg)
+
+</div>
 <div class="post-colored">
     
     <p>
-        Hello, My name is Kevin. I'm a .NET developer working at
-        <a href="https://www.linkedin.com/company/asa-inc-/" target="_blank">Asa Co</a> (Tehran, Iran).
-        I work primarily with ASP.NET/ASP.NET Core to help produce amazing stock market products for the
-        <a href="http://agahgroup.com/" target="_blank">Agah group.</a>
-        Besides, multi-threading and memory management are regular challenges here that makes me thrilled after solving them.
+        Hello, My name is <strong>Kevin Salimi</strong>. I'm a Back End .NET developer at
+        <a href="https://techspire.nl/" target="_blank">Techspire Co</a> (Haarlem, Netherlands).
     </p>
     <p>
-        Outside of my work at Asa, I consume many blog posts, podcasts, and videos to learn about the new technologies
+        Outside of my work at COS, I consume many blog posts, podcasts, and videos to learn about the new technologies
         available to me. I’m very focused on new .NET products from Microsoft; blogging about that.
     </p>
     <p>

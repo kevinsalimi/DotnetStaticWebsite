@@ -22,7 +22,11 @@ namespace K1_Static_Website.Controllers
         public async Task<IActionResult> Index()
         {
             var posts = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
-            HeaderParser.CreateNewModel();
+
+            if(posts.Length == HeaderParser.GetPostListLength())
+                return View(model: HeaderParser.GetPostList());
+
+            HeaderParser.CreateNewModel(posts.Length);
 
             foreach (var post in posts)
             {
@@ -31,7 +35,7 @@ namespace K1_Static_Website.Controllers
                     using (StreamReader reader = new StreamReader(fileStream))
                     {
                         HeaderParser.CreateNewPost(post);
-                        for (int i = 0; i < 8; i++)
+                        for (int i = 0; i < 9; i++)
                         {
                             HeaderParser.ParsLine(await reader.ReadLineAsync());
                         }
