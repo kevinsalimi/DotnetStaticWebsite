@@ -21,7 +21,7 @@ DisplayPeriority: 1
   
 </div>
 
-[In the last post](http://silentexceptions.com/article/Synchronization-by-lock-and-Monitor-statements), we learned what synchronization is and why we need it in our codes. Then `lock` and `Monitor` statements are introduced, and some samples are also demonstrated. The `Monitor` functionalities are beyond `Enter` and `Exit`. In this post, we look over `Monitor` methods and implement a simple consumer-producer queue.
+[In the last post](http://silentexception.com/article/Synchronization-by-lock-and-Monitor-statements), we learned what synchronization is and why we need it in our codes. Then `lock` and `Monitor` statements are introduced, and some samples are also demonstrated. The `Monitor` functionalities are beyond `Enter` and `Exit`. In this post, we look over `Monitor` methods and implement a simple consumer-producer queue.
 
 ## Table of contents:
 
