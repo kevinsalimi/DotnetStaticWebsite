@@ -218,4 +218,4 @@ Here is not the end of our story; in the next post, we will go through some prac
 
 
 #### Next mission
-The post paves the way for the [next mission](http://silentexceptions.com/article/Synchronization-by-lock-and-Monitor-statements-part-2) in which we will dive into details of `Wait`, `Pulse`, and `PulseAll` then will implement a simple <mark> ***producer-consumer problem***</mark> by the capabilities of `Monitor` static class.
+The post paves the way for the [next mission](http://silentexception.com/article/Synchronization-by-lock-and-Monitor-statements-part-2) in which we will dive into details of `Wait`, `Pulse`, and `PulseAll` then will implement a simple <mark> ***producer-consumer problem***</mark> by the capabilities of `Monitor` static class.

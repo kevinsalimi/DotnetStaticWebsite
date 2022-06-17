@@ -21,7 +21,7 @@ DisplayPeriority: 3
   
 </div>
 
-When I was a junior developer, some concepts were hard for me to grasp such as **DI(dependency injection)**, **IOC(inversion of control)**, and so on. The more I wrapped my head around these topics, the more questions popped into my mind. I stuck in the definition, let alone their pros and cons. Unfortunately, the top google articles are not as obvious as possible for junior programmers so that in this article I tried to make DI ([IOC may next time!](https://silentexceptions.com/article/Inversion-Of-Control-in-simple-words)) as simple and as understandable as possible not only for juniors but also for those who feel uncomfortable with DI.
+When I was a junior developer, some concepts were hard for me to grasp such as **DI(dependency injection)**, **IOC(inversion of control)**, and so on. The more I wrapped my head around these topics, the more questions popped into my mind. I stuck in the definition, let alone their pros and cons. Unfortunately, the top google articles are not as obvious as possible for junior programmers so that in this article I tried to make DI ([IOC may next time!](https://silentexception.com/article/Inversion-Of-Control-in-simple-words)) as simple and as understandable as possible not only for juniors but also for those who feel uncomfortable with DI.
 
 
 ## Table of contents:

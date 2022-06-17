@@ -24,7 +24,7 @@ DisplayPeriority: 4
  </div>
 </div>
 
-This post is the second part of simple words in which I try to explain some concepts of programming in plain English for junior developers. We have clarified the [dependency injection](https://silentexceptions.com/article/Dependency-injection-in-simple-words) in the last one and learned some basic concepts about it. In this post, we will discuss the IOC principle.
+This post is the second part of simple words in which I try to explain some concepts of programming in plain English for junior developers. We have clarified the [dependency injection](https://silentexception.com/article/Dependency-injection-in-simple-words) in the last one and learned some basic concepts about it. In this post, we will discuss the IOC principle.
 
 ## Table of contents:
 
@@ -58,7 +58,7 @@ public class B
 }
 ```
 
-The IOC tends to invert the relation in a way that class `B` should no longer be created by class `A`.  Let me recap some points from [the last post](https://silentexceptions.com/article/Dependency-injection-in-simple-words) and see what is wrong with this code.
+The IOC tends to invert the relation in a way that class `B` should no longer be created by class `A`.  Let me recap some points from [the last post](https://silentexception.com/article/Dependency-injection-in-simple-words) and see what is wrong with this code.
 
 * First, class `A` strongly depends on class `B`, which indicates that `A` cannot protect itself from possible changes of `B`. 
 * Second, tightly coupled code is impossible to unit test. 
