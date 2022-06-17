@@ -21,61 +21,17 @@ namespace K1_Static_Website.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var posts = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
-
-            if(posts.Length == HeaderParser.GetPostListLength())
-                return View(model: HeaderParser.GetPostList());
-
-            HeaderParser.CreateNewModel(posts.Length);
-
-            foreach (var post in posts)
-            {
-                using (var fileStream = new FileStream(post, FileMode.Open, FileAccess.Read))
-                {
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        HeaderParser.CreateNewPost(post);
-                        for (int i = 0; i < 9; i++)
-                        {
-                            HeaderParser.ParsLine(await reader.ReadLineAsync());
-                        }
-                        HeaderParser.MakeHeader();
-                    }
-                }
-
-
-            }
-            return View(model: HeaderParser.GetPostList());
+            var result= Redirect("https://silentexception.com");
+            result.Permanent = true;
+            return result;
         }
 
         [HttpGet("article/{*fileName}")]
         public async Task<IActionResult> Article(string fileName)
         {
-            using (var fileStream = new FileStream(HeaderParser.FindAddress(fileName),
-                FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    ArticleParser.CreateNew();
-                    for (var i = 0; i < 9; i++)
-                    {
-                        var line = await reader.ReadLineAsync();
-                        ArticleParser.ParsLine(line);
-                    }
-
-                    var markdown = await reader.ReadToEndAsync();
-                    var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
-
-                    var model = ArticleParser.GetPostDetaile();
-                    model.Html = Markdown.ToHtml(markdown, pipeline);
-
-                    ViewBag.Summary = model.Summary;
-                    ViewBag.Keywords = model.Keywords;
-                    ViewBag.Author = model.Author;
-                    
-                    return View(model: model);
-                }
-            }
+            var result = Redirect($"https://silentexception.com/article/{fileName}");
+            result.Permanent = true;
+            return result;
         }
 
         public async Task<IActionResult> About()
