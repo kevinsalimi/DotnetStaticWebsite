@@ -1,4 +1,4 @@
-﻿
+
 ## About me
 
 <div class="myDiv">
@@ -13,7 +13,7 @@
         <a href="https://techspire.nl/" target="_blank">Techspire Co</a> (Haarlem, Netherlands).
     </p>
     <p>
-        Outside of my work at COS, I consume many blog posts, podcasts, and videos to learn about the new technologies
+        Outside of my work at Techspire, I consume many blog posts, podcasts, and videos to learn about the new technologies
         available to me. I’m very focused on new .NET products from Microsoft; blogging about that.
     </p>
     <p>
