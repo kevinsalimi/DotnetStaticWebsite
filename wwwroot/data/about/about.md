@@ -3,14 +3,17 @@
 
 <div class="myDiv">
 
-![kevinsalimi](/data/Images/about1.jpg)
+![kevinsalimi](/data/Images/about1.png)
 
 </div>
 <div class="post-colored">
     
     <p>
-        Hello, My name is <strong>Kevin Salimi</strong>. I'm a Back End .NET developer at
-        <a href="https://techspire.nl/" target="_blank">Techspire Co</a> (Haarlem, Netherlands).
+        Hello, My name is <strong>Kevin Salimi</strong>. I'm a Back-End .NET developer at <a href="https://www.rabobank.com/" target="_blank">Rabobank Co</a> 
+        via <a href="https://techspire.nl/" target="_blank">Techspire Co</a> (Utrecht, Netherlands).
+    </p>
+    <p>
+        In Rabobank, I work primarily with .NET Core and Azure to help produce amazing products.
     </p>
     <p>
         Outside of my work at Techspire, I consume many blog posts, podcasts, and videos to learn about the new technologies
@@ -21,3 +24,4 @@
     </p>
     
 </div>
+
