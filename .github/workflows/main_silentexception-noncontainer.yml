@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'silentexception-noncontainer'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FE77C483F860451CB0CA34EBAC29CE78 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1EAAA3A3387244BAA824968BDC351625 }}
           package: .
