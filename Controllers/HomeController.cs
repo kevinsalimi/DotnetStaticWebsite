@@ -21,28 +21,23 @@ namespace K1_Static_Website.Controllers
 
         public async Task<IActionResult> Index()
         {
-           var posts = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
+            var blogFiles = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
 
-            if(posts.Length == HeaderParser.GetPostListLength())
+            if (blogFiles.Length == HeaderParser.GetPostListLength())
                 return View(model: HeaderParser.GetPostList());
 
-            HeaderParser.CreateNewModel(posts.Length);
+            HeaderParser.CreateNewModel(blogFiles.Length);
 
-            foreach (var post in posts)
+            foreach (var blog in blogFiles)
             {
-                using (var fileStream = new FileStream(post, FileMode.Open, FileAccess.Read))
+                using var fileStream = new FileStream(blog, FileMode.Open, FileAccess.Read);
+                using StreamReader reader = new StreamReader(fileStream);
+                HeaderParser.CreateNewPost(blog);
+                for (int i = 0; i < 9; i++)
                 {
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        HeaderParser.CreateNewPost(post);
-                        for (int i = 0; i < 9; i++)
-                        {
-                            HeaderParser.ParsLine(await reader.ReadLineAsync());
-                        }
-                        HeaderParser.MakeHeader();
-                    }
+                    HeaderParser.ParsLine(await reader.ReadLineAsync());
                 }
-
+                HeaderParser.MakeHeader();
 
             }
             return View(model: HeaderParser.GetPostList());
@@ -72,7 +67,7 @@ namespace K1_Static_Website.Controllers
                     ViewBag.Summary = model.Summary;
                     ViewBag.Keywords = model.Keywords;
                     ViewBag.Author = model.Author;
-                    
+
                     return View(model: model);
                 }
             }
@@ -98,6 +93,11 @@ namespace K1_Static_Website.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult HealthCheck()
+        {
+            return Ok();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace K1_Static_Website.Parser
         public static void CreateNewModel(int length)
         {
             postModels = new List<PostModel>(length);
-            postAddress = new Dictionary<string, string>();
+            postAddress = new Dictionary<string, string>(length);
         }
 
         public static void CreateNewPost(string address)
