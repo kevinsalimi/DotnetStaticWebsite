@@ -39,4 +39,4 @@ jobs:
           app-name: 'staticwebsitefunciton'
           slot-name: 'Production'
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AB63EDDDBB62496CBB638D613E2B2BCA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_24132DF42B3A4C9FBC59BDD708BBB459 }}
