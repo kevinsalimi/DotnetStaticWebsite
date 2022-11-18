@@ -1,8 +1,8 @@
 ---
-Title: Inversion Of Control (IOC) in simple words
-Link: Inversion Of Control in simple words
+Title: Inversion of Control (IoC) in simple words
+Link: Inversion of Control in simple words
 Summary: Inversion of control at first glance may seem an obscure term though when you define it in simple sentences, you would realize how much it is understandable and can bring advantages to your application. In this post, I tried explaining it as simple as and as understandable as possible for junior developers.
-Keywords: IOC,Inversion Of Control, DI, dependency injection
+Keywords: IoC,Inversion Of Control, DI, dependency injection
 CreationDate: Friday, June 25, 2021
 Author: Kaywan Salimi
 ArticleId: 4a1c57fb-1r48-48bd-b8c1-5a71b7q1w2e3
@@ -11,7 +11,7 @@ DisplayPeriority: 4
 
 <div align="center">
 
-## Inversion Of Control (IOC) in simple words
+## Inversion Of Control (IoC) in simple words
 
 </div>
 
@@ -24,15 +24,15 @@ DisplayPeriority: 4
  </div>
 </div>
 
-This post is the second part of simple words in which I try to explain some concepts of programming in plain English for junior developers. We have clarified the [dependency injection](https://silentexception.com/article/Dependency-injection-in-simple-words) in the last one and learned some basic concepts about it. In this post, we will discuss the IOC principle.
+This post is the second part of simple words in which I try to explain some concepts of programming in plain English for junior developers. We have clarified the [dependency injection](https://silentexception.com/article/Dependency-injection-in-simple-words) in the last one and learned some basic concepts about it. In this post, we will discuss the IoC principle.
 
 ## Table of contents:
 
 * [Warming up](#warming-up)
 * [What do you mean by `Control`?](#what-do-you-mean-by-control)
-* [`IOC` as a cure](#ioc-as-a-cure)
-* [What is the difference between IOC and DI?](#what-is-the-difference-between-ioc-and-di)
-* [DI/IOC container](#diioc-container)
+* [`IoC` as a cure](#ioc-as-a-cure)
+* [What is the difference between IoC and DI?](#what-is-the-difference-between-ioc-and-di)
+* [DI/IoC container](#diioc-container)
 * [Conclusion](#conclusion)
 
 
@@ -58,13 +58,13 @@ public class B
 }
 ```
 
-The IOC tends to invert the relation in a way that class `B` should no longer be created by class `A`.  Let me recap some points from [the last post](https://silentexception.com/article/Dependency-injection-in-simple-words) and see what is wrong with this code.
+The IoC tends to invert the relation in a way that class `B` should no longer be created by class `A`.  Let me recap some points from [the last post](https://silentexception.com/article/Dependency-injection-in-simple-words) and see what is wrong with this code.
 
 * First, class `A` strongly depends on class `B`, which indicates that `A` cannot protect itself from possible changes of `B`. 
 * Second, tightly coupled code is impossible to unit test. 
 
  
-### `IOC` as a cure
+### `IoC` as a cure
 To fix the problem, we should relieve the control of a class `A`. In short, we invert the control and give it to others to create a new instance of class `B` and pass it to class `A` through the constructor. 
 ```csharp
 public class A
@@ -80,18 +80,18 @@ public class A
 In the preceding code, class `A` is no longer in control of creating an instance of class `B`. This technique may be familiar to you; yes! you are right! It is called *dependency injection(DI)*. In short, DI is a technique for achieving the Inversion of control between classes and their dependencies.
 
  
-### What is the difference between `IOC` and `DI`?
-Indeed, DI is a form of IOC and there are plenty of types of IOC:
+### What is the difference between `IoC` and `DI`?
+Indeed, DI is a form of IoC and there are plenty of types of IoC:
 
 * Using dependency injection pattern
 * Using Service locator pattern
 * Factory pattern
 * and more...
 
-the bullets would not be covered in this article, yet the main point is, **IOC is a high-level principle in programming which is implemented through different fashions.**
+the bullets would not be covered in this article, yet the main point is, **IoC is a high-level principle in programming which is implemented through different fashions.**
 
-### DI/IOC container
-As time goes by, software gradually gets grows, so writing a testable and maintainable code would not be as simple as the first starting days of the project. DI containers (a.k.a IOC container) help us handle the creation of instances all over the program, which leads to having a loosely coupled application. DI container fills this gap in the application.
+### DI/IoC container
+As time goes by, software gradually gets grows, so writing a testable and maintainable code would not be as simple as the first starting days of the project. DI containers (a.k.a IoC container) help us handle the creation of instances all over the program, which leads to having a loosely coupled application. DI container fills this gap in the application.
 
  
 >DI container is a framework by which we can automatically handle the dependency injection among the classes of your application.
@@ -105,4 +105,4 @@ There are alot of DI containers out there; toppin the charts are:
 * [**Ninject**](http://ninject.org/)
 
 ### Conclusion
-As we discussed, IOC is a high-level principle in programming and has different ways of implementation, one of which is the Dependency Injection. IOC brings us a loosely coupled software that every part of it could be tested and easy to maintain.
+As we discussed, IoC is a high-level principle in programming and has different ways of implementation, one of which is the Dependency Injection. IoC brings us a loosely coupled software that every part of it could be tested and easy to maintain.
