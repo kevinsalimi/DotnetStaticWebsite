@@ -3,13 +3,13 @@
 
 <div class="myDiv">
 
-![kevinsalimi](/data/Images/about1.png)
+![Kaywansalimi](/data/Images/about1.png)
 
 </div>
 <div class="post-colored">
     
     <p>
-        Hello, My name is <strong>Kevin Salimi</strong>. I'm a Back-End .NET developer at <a href="https://www.rabobank.com/" target="_blank">Rabobank Co</a> 
+        Hello, My name is <strong>Kaywan Salimi</strong>. I'm a Back-End .NET developer at <a href="https://www.rabobank.com/" target="_blank">Rabobank Co</a> 
         via <a href="https://techspire.nl/" target="_blank">Techspire Co</a> (Utrecht, Netherlands).
     </p>
     <p>

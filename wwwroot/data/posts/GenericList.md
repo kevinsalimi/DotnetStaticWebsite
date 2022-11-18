@@ -4,7 +4,7 @@ Link: Why should we care about the capacity of generic lists
 Summary: Have you ever thought about generic lists under the hood? Do you know what's happening when a generic list is created? How about the internal array of generic lists? Or how do you use them efficiently? In this article, you can find answers and even more.
 Keywords: GenericList, performance
 CreationDate: Saturday, March 13, 2021
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a711qaz2wsx
 DisplayPeriority: 2
 ---

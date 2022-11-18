@@ -4,7 +4,7 @@ Link: Raw string literal in Csharp11
 Summary: Working with string data types has been improving gradually in different versions of C#. At first glance, they may seem like small changes though they help us in the way that how to deal with strings subtly and usefully. Verbatim string(`@`) and string interpolation (`$`) are a few of those facilities that C# offers during these years. Along those lines, in this short blog, we're going to look over the raw string literal in C# 11.
 Keywords: C#11, raw string literal
 CreationDate: Monday, Jul 7, 2022
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 9a1c5744-1fb8-48bd-k4c1-5a711qaz2wpp
 DisplayPeriority: 7
 ---

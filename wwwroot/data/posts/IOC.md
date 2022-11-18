@@ -4,7 +4,7 @@ Link: Inversion Of Control in simple words
 Summary: Inversion of control at first glance may seem an obscure term though when you define it in simple sentences, you would realize how much it is understandable and can bring advantages to your application. In this post, I tried explaining it as simple as and as understandable as possible for junior developers.
 Keywords: IOC,Inversion Of Control, DI, dependency injection
 CreationDate: Friday, June 25, 2021
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 4a1c57fb-1r48-48bd-b8c1-5a71b7q1w2e3
 DisplayPeriority: 4
 ---

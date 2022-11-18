@@ -4,7 +4,7 @@ Link: Synchronization by lock and Monitor statements
 Summary: Working through enterprise applications has various challenges, among them, multi-threading stands out. Nowadays, all applications tend to use all capabilities of modern hardware, especially CPUs in our case. Performing several jobs simultaneously...
 Keywords: multithreading, lock, Monitor
 CreationDate: Friday, January 1, 2021
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a71b7caaa3b
 DisplayPeriority: 0
 ---

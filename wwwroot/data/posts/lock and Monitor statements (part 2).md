@@ -4,7 +4,7 @@ Link: Synchronization by lock and Monitor statements part 2
 Summary: In this part, we go over the Monitor class and its best practices, also a consumer-producer problem is implemented by the Monitor capabilities.
 Keywords: multithreading, lock, Monitor
 CreationDate: Monday, February 1, 2021
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a71b7cbba45
 DisplayPeriority: 1
 ---

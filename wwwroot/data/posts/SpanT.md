@@ -4,7 +4,7 @@ Link: why-should-you-use-spant-in-dotnet
 Summary: Going over Span<T>, teaches us how we can have a higher performance without memory allocation code and how it is a better alternative to the Substring API. Span<T> reduces the load on GC by minimizing managed memory allocations. Span<T> has some restriction of usages, to overcome them Memory<T> has briefly introduced.
 Keywords: Span<T>, Memory<T>, performace, performace in .NET, substring
 CreationDate: Monday, October 25, 2021
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 5b1c57fb-1r48-48bd-b8c1-5a71b7q1w2e3
 DisplayPeriority: 5
 ---

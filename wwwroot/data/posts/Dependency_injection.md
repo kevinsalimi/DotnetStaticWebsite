@@ -4,7 +4,7 @@ Link: Dependency injection in simple words
 Summary: In this article I tried to make DI as simple and as understandable as possible not only for juniors but also for those who feel uncomfortable with dependency injection.
 Keywords: DI, dependency injection, testability
 CreationDate: Tuesday, May 4, 2021
-Author: Kevin Salimi
+Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a71b7q1w2e3
 DisplayPeriority: 3
 ---
