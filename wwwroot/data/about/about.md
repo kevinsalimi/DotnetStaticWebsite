@@ -3,7 +3,7 @@
 
 <div class="myDiv">
 
-![Kaywansalimi](/data/Images/about1.png)
+![Kaywansalimi](/data/Images/about.jpeg)
 
 </div>
 <div class="post-colored">
