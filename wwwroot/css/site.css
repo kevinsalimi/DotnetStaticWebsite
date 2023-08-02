@@ -542,3 +542,11 @@ li.nav-item:hover {
     height: 30px;
     width: 30px;
 }
+
+img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 18%;
+    margin: 0 auto;
+    border: 2px solid  black;
+}
