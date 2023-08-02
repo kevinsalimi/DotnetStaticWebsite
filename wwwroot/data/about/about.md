@@ -9,11 +9,10 @@
 <div class="post-colored">
     
     <p>
-        Hello, My name is <strong>Kaywan Salimi</strong>. I'm a Software Engineer at <a href="https://www.rabobank.com/" target="_blank">Rabobank Co</a> 
-        via <a href="https://techspire.nl/" target="_blank">Techspire Co</a> (Utrecht, Netherlands).
+        Hello, My name is <strong>Kaywan Salimi</strong>. I'm a Software Engineer at <a href="https://www.rabobank.com/" target="_blank">Rabobank Co</a> (Utrecht, Netherlands).
     </p>
     <p>
-        In Rabobank, I work primarily with .NET Core and Azure cloud to help produce amazing products.
+        In Rabobank, I work primarily with .NET Core and Azure Cloud to help produce a fantastic product with a bunch of nice people from all over the world, a system for evaluating the risks of mortgages for the bank. 
     </p>
     <p>
         Outside of my work at Rabobank, I consume many blog posts, podcasts, and videos to learn about the new technologies
