@@ -537,3 +537,8 @@ li.nav-item:hover {
     width: 37%;
     margin: 0 auto;
 }
+
+.logo{
+    height: 30px;
+    width: 30px;
+}

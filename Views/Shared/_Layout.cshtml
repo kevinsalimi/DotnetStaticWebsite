@@ -33,12 +33,22 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
+                <div class="hide-inLarge">
+                    <a class="navbar-brand hide-inLarge" asp-controller="Home" asp-action="Index">
+                        <img id="img_logo" class="logo" alt="k1" src="/data/Images/Logo.png" />
+                    </a>
+                </div>
                 <a class="navbar-brand hide-inLarge" asp-controller="Home" asp-action="Index">Silent Exception</a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <a class="navbar-brand hide-mobile" asp-controller="Home" asp-action="Index">
+                        <img id="img_logo" class="logo hide-mobile" alt="k1" src="/data/Images/Logo.png" />
+                    </a>
+
                     <ul class="navbar-nav flex-grow-1 margin-bottom-mobile">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
