@@ -17,7 +17,7 @@ DisplayPeriority: 3
 
 <div align="center">
 
-  ![dependency-injection](/data/Images/Dependency-Injection-793x397.png)
+  ![dependency-injection](/data/Images/Dependency-Injection.png)
   
 </div>
 

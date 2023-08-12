@@ -16,7 +16,7 @@ DisplayPeriority: 0
     
 <div align="center">
 
-  ![multi-threading](/data/Images/Needle-and-thread-862x574.jpg)
+  ![multi-threading](/data/Images/Needle-and-thread-.png)
   
 </div>
 

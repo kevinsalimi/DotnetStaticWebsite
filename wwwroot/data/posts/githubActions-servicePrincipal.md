@@ -16,7 +16,7 @@ DisplayPeriority: 8
 
 <div align="center">
 
-  ![inversion-of-control](/data/Images/sp%26githubactions/azure-cloud.png)
+  ![inversion-of-control](/data/Images/sp%26githubactions/azure-cloud-.png)
   
 </div>
 

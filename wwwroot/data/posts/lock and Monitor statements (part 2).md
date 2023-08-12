@@ -17,7 +17,7 @@ DisplayPeriority: 1
 
 <div align="center">
 
-  ![multithreading](/data/Images/multithreading.jpg)
+  ![multithreading](/data/Images/multithreading1.png)
   
 </div>
 
