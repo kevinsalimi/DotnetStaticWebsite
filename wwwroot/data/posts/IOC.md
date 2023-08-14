@@ -20,7 +20,7 @@ DisplayPeriority: 4
   ![inversion-of-control](/data/Images/inversionOfControl1.png)
   <div class="post-date" style="text-align: left;">
     <span>Designed on</span>
-    <a href="https://www.canva.com/"> canva</a>
+    <a href="https://www.canva.com/" target="_blank"> canva</a>
  </div>
 </div>
 
