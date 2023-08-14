@@ -34,7 +34,7 @@ In this blog, I gonna walk you through just OAuth 2.0, not OPID due to not makin
     * [Client Credentials Grant Flow](#client-credentials-grant-flow)
     * [Authorization Code Grant Flow](#authorization-code-grant-flow)
 * [Conclusion](#conclusion)
-* [Usefull Resources](#usefull-resources)
+* [Useful Resources](#useful-resources)
 
 ## What is OAuth?
 Let's start with a sensible example. Imagine that you're hosting a party in your house, and you don't want your friends to have access to your entire house except the kitchen. In this scenario, think of yourself as a **resource owner** who owns the house and its resources; and your friends as the **third-party applications (clients)** who want to access your resources.
