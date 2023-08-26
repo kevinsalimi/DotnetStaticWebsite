@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,6 +38,10 @@ namespace K1_Static_Website
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            
+            app.Map("/availability", (app) => RunExtensions.Run(app,
+               async context => await context.Response.WriteAsync("Available!")));
+               
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -49,5 +54,6 @@ namespace K1_Static_Website
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
     }
 }
