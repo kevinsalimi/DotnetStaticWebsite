@@ -6,7 +6,7 @@ Keywords: OAuth2.0, security, OAuthFlows
 CreationDate: Tuesday, August 15, 2023
 Author: Kaywan Salimi
 ArticleId: 6t4c57fb-1r48-48bd-b8c1-as5w8s4x1s2e
-DisplayPeriority: 9
+DisplayPriority: 9
 ---
 <div align="center">
 

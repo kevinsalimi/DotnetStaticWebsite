@@ -1,3 +1,4 @@
+using K1_Static_Website.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,10 +26,13 @@ namespace K1_Static_Website
         {
             services.AddControllers();
             services.AddMvc();
+            services.AddSingleton<IContentInitializer, ContentInitializer>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.ApplicationServices.GetService<IContentInitializer>();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

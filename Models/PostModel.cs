@@ -16,6 +16,6 @@ namespace K1_Static_Website.Models
         public string Link { get; set; }
         public string Address { get; set; }
         public string ArticleId { get; set; }
-        public int DisplayPeriority { get; set; }
+        public int DisplayPriority { get; set; }
     }
 }

@@ -6,7 +6,7 @@ Keywords: multithreading, lock, Monitor
 CreationDate: Monday, February 1, 2021
 Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a71b7cbba45
-DisplayPeriority: 1
+DisplayPriority: 1
 ---
 
 <div align="center">

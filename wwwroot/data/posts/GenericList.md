@@ -6,7 +6,7 @@ Keywords: GenericList, performance
 CreationDate: Saturday, March 13, 2021
 Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a711qaz2wsx
-DisplayPeriority: 2
+DisplayPriority: 2
 ---
 
 <div align="center">

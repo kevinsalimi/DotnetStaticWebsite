@@ -25,33 +25,33 @@ namespace K1_Static_Website.Parser
 
         public static void ParsLine(string line)
         {
-            var splitedLine = line.Split(':');
-            switch (splitedLine[0])
+            var splittedLine = line.Split(':');
+            switch (splittedLine[0])
             {
                 case nameof(PostModel.Title):
-                    post.Title = splitedLine[1];
+                    post.Title = splittedLine[1];
                     break;
                 case nameof(PostModel.Link):
-                    post.Link = splitedLine[1].Trim().Replace(' ', '-');
+                    post.Link = splittedLine[1].Trim().Replace(' ', '-');
                     postAddress.Add(post.Link, post.Address);
                     break;
                 case nameof(PostModel.Summary):
-                    post.Summary = splitedLine[1];
+                    post.Summary = splittedLine[1];
                     break;
                 case nameof(PostModel.Keywords):
-                    post.Keywords = splitedLine[1];
+                    post.Keywords = splittedLine[1];
                     break;
                 case nameof(PostModel.CreationDate):
-                    post.CreationDate = splitedLine[1];
+                    post.CreationDate = splittedLine[1];
                     break;
                 case nameof(PostModel.Author):
-                    post.Author = splitedLine[1];
+                    post.Author = splittedLine[1];
                     break;
                 case nameof(PostModel.ArticleId):
-                    post.ArticleId = splitedLine[1];
+                    post.ArticleId = splittedLine[1];
                     break;
-                case nameof(PostModel.DisplayPeriority):
-                    post.DisplayPeriority = int.Parse(splitedLine[1]);
+                case nameof(PostModel.DisplayPriority):
+                    post.DisplayPriority = int.Parse(splittedLine[1]);
                     break;
                 default:
                     break;
@@ -65,7 +65,7 @@ namespace K1_Static_Website.Parser
 
         public static List<PostModel> GetPostList()
         {
-            return postModels.OrderByDescending(x=>x.DisplayPeriority).ToList();
+            return postModels.OrderByDescending(x=>x.DisplayPriority).ToList();
         }
 
         public static string FindAddress(string link)

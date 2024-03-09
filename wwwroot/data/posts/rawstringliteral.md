@@ -6,7 +6,7 @@ Keywords: C#11, raw string literal
 CreationDate: Monday, Jul 7, 2022
 Author: Kaywan Salimi
 ArticleId: 9a1c5744-1fb8-48bd-k4c1-5a711qaz2wpp
-DisplayPeriority: 7
+DisplayPriority: 7
 ---
 
 <div align="center">

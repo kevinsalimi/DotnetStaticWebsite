@@ -6,7 +6,7 @@ Keywords: DI, dependency injection, testability
 CreationDate: Tuesday, May 4, 2021
 Author: Kaywan Salimi
 ArticleId: 9a1c57fb-1fb8-48bd-b8c1-5a71b7q1w2e3
-DisplayPeriority: 3
+DisplayPriority: 3
 ---
 
 <div align="center">
