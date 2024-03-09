@@ -8,7 +8,7 @@ namespace K1_Static_Website.Services
     {
         List<PostModel> GetLandingPageContent();
         string GetAboutPageContent();
-        PostModel FindBlogHeaderInfo(string filePath);
+        PostModel FindBlogHeaderInfo(string link);
 
     }
 }

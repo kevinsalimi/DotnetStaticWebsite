@@ -30,9 +30,9 @@ namespace K1_Static_Website.Services
             return aboutPageContent;
         }
 
-        public PostModel FindBlogHeaderInfo(string filePath)
+        public PostModel FindBlogHeaderInfo(string link)
         {
-            return blogPosts.FirstOrDefault(x => x.Address.Contains(filePath));
+            return blogPosts.FirstOrDefault(x => x.Link.Contains(link));
         }
 
         private void BuildTheAboutPage()

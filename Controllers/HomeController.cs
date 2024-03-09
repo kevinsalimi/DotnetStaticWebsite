@@ -1,14 +1,9 @@
 ﻿using K1_Static_Website.Models;
-using K1_Static_Website.Parser;
 using K1_Static_Website.Services;
 using Markdig;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace K1_Static_Website.Controllers
@@ -26,13 +21,12 @@ namespace K1_Static_Website.Controllers
             return View(model: _contentInitializer.GetLandingPageContent());
         }
 
-        [HttpGet("article/{*fileName}")]
-        public async Task<IActionResult> Article(string fileName)
+        [HttpGet("article/{*link}")]
+        public async Task<IActionResult> Article(string link)
         {
-            string filePath = fileName.Replace("%2F", "/");
-            var blogHeaderInfo = _contentInitializer.FindBlogHeaderInfo(filePath);
+            var blogHeaderInfo = _contentInitializer.FindBlogHeaderInfo(link);
 
-            using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            using var fileStream = new FileStream(blogHeaderInfo.Address, FileMode.Open, FileAccess.Read);
             using StreamReader reader = new StreamReader(fileStream);
 
             for (var i = 0; i < 9; i++)
