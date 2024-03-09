@@ -1,5 +1,4 @@
-﻿using K1_Static_Website.Helper;
-using K1_Static_Website.Models;
+﻿using K1_Static_Website.Models;
 using K1_Static_Website.Parser;
 using K1_Static_Website.Services;
 using Markdig;
