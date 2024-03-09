@@ -6,7 +6,7 @@ Keywords: Azure, GitHub Actions, Service Principal, dependency injection
 CreationDate: Friday, April 25, 2023
 Author: Kaywan Salimi
 ArticleId: 48er5dfb-1r48-48bd-b8c1-5a71b7q1w2t6
-DisplayPeriority: 8
+DisplayPriority: 8
 ---
 <div align="center">
 

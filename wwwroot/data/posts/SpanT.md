@@ -6,7 +6,7 @@ Keywords: Span<T>, Memory<T>, performace, performace in .NET, substring
 CreationDate: Monday, October 25, 2021
 Author: Kaywan Salimi
 ArticleId: 5b1c57fb-1r48-48bd-b8c1-5a71b7q1w2e3
-DisplayPeriority: 5
+DisplayPriority: 5
 ---
 <div align="center">
 

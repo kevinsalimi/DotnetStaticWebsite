@@ -6,7 +6,7 @@ Keywords: IoC,Inversion Of Control, DI, dependency injection
 CreationDate: Friday, June 25, 2021
 Author: Kaywan Salimi
 ArticleId: 4a1c57fb-1r48-48bd-b8c1-5a71b7q1w2e3
-DisplayPeriority: 4
+DisplayPriority: 4
 ---
 
 <div align="center">

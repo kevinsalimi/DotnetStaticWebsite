@@ -1,92 +1,55 @@
-﻿using K1_Static_Website.Helper;
-using K1_Static_Website.Models;
-using K1_Static_Website.Parser;
+﻿using K1_Static_Website.Models;
+using K1_Static_Website.Services;
 using Markdig;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace K1_Static_Website.Controllers
 {
     public class HomeController : Controller
     {
-        private const string postEnvironment = "wwwroot/data/posts";
-        private const string aboutmd = "wwwroot/data/about/about.md";
-        private const string postExtention = "*.md";
+        private readonly IContentInitializer _contentInitializer;
 
-        public async Task<IActionResult> Index()
+        public HomeController(IContentInitializer landingPageCreator)
         {
-            var blogFiles = Directory.GetFiles(postEnvironment, postExtention, SearchOption.TopDirectoryOnly);
-
-            if (blogFiles.Length == HeaderParser.GetPostListLength())
-                return View(model: HeaderParser.GetPostList());
-
-            HeaderParser.CreateNewModel(blogFiles.Length);
-
-            foreach (var blog in blogFiles)
-            {
-                using var fileStream = new FileStream(blog, FileMode.Open, FileAccess.Read);
-                using StreamReader reader = new StreamReader(fileStream);
-                HeaderParser.CreateNewPost(blog);
-                for (int i = 0; i < 9; i++)
-                {
-                    HeaderParser.ParsLine(await reader.ReadLineAsync());
-                }
-                HeaderParser.MakeHeader();
-
-            }
-            return View(model: HeaderParser.GetPostList());
+            _contentInitializer = landingPageCreator;
+        }
+        public IActionResult Index()
+        {
+            return View(model: _contentInitializer.GetLandingPageContent());
         }
 
-        [HttpGet("article/{*fileName}")]
-        public async Task<IActionResult> Article(string fileName)
+        [HttpGet("article/{*link}")]
+        public async Task<IActionResult> Article(string link)
         {
-            using (var fileStream = new FileStream(HeaderParser.FindAddress(fileName),
-                FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    ArticleParser.CreateNew();
-                    for (var i = 0; i < 9; i++)
-                    {
-                        var line = await reader.ReadLineAsync();
-                        ArticleParser.ParsLine(line);
-                    }
+            var blogHeaderInfo = _contentInitializer.FindBlogHeaderInfo(link);
 
-                    var markdown = await reader.ReadToEndAsync();
-                    var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+            using var fileStream = new FileStream(blogHeaderInfo.Address, FileMode.Open, FileAccess.Read);
+            using StreamReader reader = new StreamReader(fileStream);
 
-                    var model = ArticleParser.GetPostDetaile();
-                    model.Html = Markdown.ToHtml(markdown, pipeline);
+            for (var i = 0; i < 9; i++)
+            { reader.ReadLine(); }
 
-                    ViewBag.Summary = model.Summary;
-                    ViewBag.Keywords = model.Keywords;
-                    ViewBag.Author = model.Author;
+            var markdown = await reader.ReadToEndAsync();
+            var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
 
-                    return View(model: model);
-                }
-            }
+            ViewBag.Summary = blogHeaderInfo.Summary;
+            ViewBag.Keywords = blogHeaderInfo.Keywords;
+            ViewBag.Author = blogHeaderInfo.Author;
+
+            return View(model:
+                        new ArticleModel
+                        {
+                            Html = Markdown.ToHtml(markdown, pipeline),
+                            ArticleId = blogHeaderInfo.ArticleId
+                        });
         }
 
         public async Task<IActionResult> About()
         {
-            string html = string.Empty;
-            using (var fileStream = new FileStream(aboutmd, FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
-                    var markdown = await reader.ReadToEndAsync();
-                    html = Markdown.ToHtml(markdown, pipeline);
-                }
-            }
-
-            return View(model: html);
+            return View(model: _contentInitializer.GetAboutPageContent());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
